@@ -1,0 +1,51 @@
+{% extends 'dashboard/base.html' %}
+
+{% block content %}
+<div class="content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card ">
+                <form method="POST" class="form-horizontal" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="card-header ">
+                        <h4 class="card-title">{{ title }}</h4>
+                    </div>
+                    <div class="card-body ">
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Judul</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">{{ form.judul }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Isi</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">{{ form.isi }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Kategori</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">{{ form.kategori }}</div>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <label class="col-sm-2 col-form-label">Author</label>
+                            <div class="col-sm-10">
+                                <div class="form-group">{{ form.author }}</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="col-sm-2 col-form-label">Thumbnail</label>
+                            <div class="col-sm-10">{{ form.thumbnail }}</div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-right">
+                        <button class="btn btn-success">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

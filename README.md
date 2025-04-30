@@ -37,3 +37,5 @@ Cara install Pillow
 ```commandline
 pip install pillow
 ```
+
+Menambahkan Template
